@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="grid-wrapper">
+        <h1>Currency & Amount Records</h1>
+        <p>Click on the headers of the column for the data to be sorted!</p>
+    </div>
+    <table id="dataGrid">
+        <thead>
+            <tr>
+                <th id="currencyHeader" data-column="currency" data-sort-dir="asc">Currency<span></span></th>
+                <th id="amountHeader" data-column="amount" data-sort-dir="asc">Amount<span></span></th>
+            </tr>
+        </thead>
+        <tbody id="dataBody"></tbody>
+    </table>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+/* user-story-2-data-grid/style.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+#grid-wrapper {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+p {
+    text-align: center;
+    color: #666;
+}
+
+#dataGrid {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+#dataGrid th, #dataGrid td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+#dataGrid thead {
+    background-color: #007bff;
+    color: white;
+}
+
+#dataGrid th {
+    cursor: pointer;
+    position: relative;
+}
+
+#dataGrid th:hover {
+    background-color: #0056b3;
+}
+
+#dataGrid th span {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 0.8em;
+}
+
+#dataGrid tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#dataGrid tbody tr:hover {
+    background-color: #f1f1f1;
+}
