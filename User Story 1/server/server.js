@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const { calculate } = require("./calculate.js");
 const SECRET_API_KEY = process.env.SECRET_API_KEY;
-const PORT = process.env.PORT; // Default to 3000 if PORT is not set
+const PORT = process.env.PORT;
 const options = {
   key: fs.readFileSync(path.join(__dirname, "key.pem")),
   cert: fs.readFileSync(path.join(__dirname, "cert.pem")),

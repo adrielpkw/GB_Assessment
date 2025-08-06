@@ -14,10 +14,3 @@ The key features are:
 ### How to Run
 
 Simply open the `User Story 2/index.html` file in any modern web browser. No server or build process is required.
-
-### Code Quality
-
-The code is written to be readable and functional as per the submission guidelines.
-* JavaScript is organized within a `DOMContentLoaded` event listener to ensure the DOM is ready before manipulation.
-* Functions are separated for parsing data, rendering the grid, and sorting, improving modularity.
-* The use of `data-*` attributes in HTML allows for a clean separation of concerns between the markup and the script.

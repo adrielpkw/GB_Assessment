@@ -1,5 +1,24 @@
 function calculate(expression) {
     try {
+        // Check for empty input
+        if (!expression || typeof expression !== 'string' || expression.trim() === '') {
+            throw new Error("No input provided");
+        }
+
+        // Check for invalid characters (only digits, operators, parentheses, dot, and spaces allowed)
+        if (/[^\d\+\-\*\/\.\(\)\s]/.test(expression)) {
+            throw new Error("Invalid characters in expression");
+        }
+
+        // Check for multiple consecutive operators (except for negative numbers)
+        if (/([\+\-\*\/])\s*\1+/.test(expression.replace(/--/g, ''))) {
+            throw new Error("Multiple consecutive operators");
+        }
+
+        // Check for leading or trailing operators
+        if (/^[\+\*\/]/.test(expression.trim()) || /[\+\-\*\/]$/.test(expression.trim())) {
+            throw new Error("Leading or trailing operator");
+        }
         // It handles for cases such as below:
         // - '2(3+4)' -> '2*(3+4)'
         // - '(3+4)(5)' -> '(3+4)*(5)'
