@@ -79,7 +79,6 @@ function calculate(expression) {
                 operators.pop(); // Pop the '('
             } else if (precedence[token]) {
                 // If the token is an operator, apply precedence rules
-                // Corrected loop condition: Must not apply operators over a '('
                 while (
                     operators.length &&
                     operators[operators.length - 1] !== "(" && 
